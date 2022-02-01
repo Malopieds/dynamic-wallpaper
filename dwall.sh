@@ -154,7 +154,7 @@ get_img() {
 pywal_set() {
 	get_img "$1"
 	if [[ -x `command -v wal` ]]; then
-		wal -i "$image.$FORMAT"
+		wal -e -i "$image.$FORMAT"
 	else
 		echo -e ${RED}"[!] pywal is not installed on your system, exiting..."
 		{ reset_color; exit 1; }
